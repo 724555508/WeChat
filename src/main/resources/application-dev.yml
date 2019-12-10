@@ -1,0 +1,72 @@
+server: 
+  port: 4399
+#  servlet:
+#    context-path: /sunShine
+  tomcat:
+    max-http-post-size: -1
+spring:
+  redis:
+    host: 39.107.109.17
+    port: 6379
+    password: 724555508
+    jedis:
+      pool:
+        max-wait: -1
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+    timeout: 10000
+    database: 8
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://106.13.5.13:3339/wechat?useSSL=false&autoReconnect=true&rewriteBatchedStatements=TRUE&useUnicode=true
+    username: root
+    password: 123456
+   
+  mail:
+    default-encoding: UTF-8
+    host: smtp.yeah.net
+    password: XueYang1819
+    port: 25
+    protocol: smtp
+    username: love_yhk@yeah.net
+    #    host: smtp.1-love.cn
+#    password: XueYang1819
+#    port: 25
+#    protocol: smtp
+#    username: mail@1-love.cn
+  activemq:
+    broker-url: tcp://47.52.197.68:61616
+    user: admin
+    password: 724555508
+    pool:
+      enabled: false
+      
+      
+ ### xxl-job admin address list, such as "http://address" or "http://address01,http://address02" 调度中心部署跟地址：如调度中心集群部署存在多个地址则用逗号分隔。执行器将会使用该地址进行"执行器心跳注册"和"任务结果回调"。
+xxl:
+  job:
+    admin:
+      addresses: http://192.168.100.80:8585/andun-job-admin
+##http://127.0.0.1:8280/xxl-job-admin
+### xxl-job executor address:执行器"AppName"和地址信息配置：AppName执行器心跳注册分组依据；地址信息用于"调度中心请求并触发任务"和"执行器注册"。执行器默认端口为9999，执行器IP默认为空表示自动获取IP，多网卡时可手动设置指定IP，该IP不会绑定Host仅作为通讯实用。单机部署多个执行器时，注意要配置不同执行器端口；
+    executor:
+      appname: xxl-job-Yang
+      ip: 192.168.100.12
+      port: 9999
+### xxl-job log path :执行器运行日志文件存储的磁盘位置，需要对该路径拥有读写权限
+      logpath: /data/applogs/xxl-job/jobhandler
+### xxl-job log retention days:执行器Log文件定期清理功能，指定日志保存天数，日志文件过期自动删除。限制至少保持3天，否则功能不生效；
+      logretentiondays: -1
+### xxl-job, access token  :执行器通讯TOKEN，非空时启用    
+    accessToken: 
+    
+logging: 
+  level: 
+    com:
+      Yang: DEBUG
+      
+prefix: 
+  file: 
+    image: http://192.168.100.12:80/image
+    video: http://192.168.100.12:80/video
