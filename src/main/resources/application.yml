@@ -56,8 +56,8 @@ warning:
 ###雪扬科技（手机尾号:7668）
 aliyun: 
   sms: 
-    accessKeyID: LTAIrp1AoFqosKaU
-    accessKeySecret:  qwjqIAafq5QO1c3iMDJwRWKAz5cC31
+    accessKeyID: 
+    accessKeySecret:  
     messageType: SmsReport
 ##阿里云短信回执队列
     queueName: Alicom-Queue-1207243149952449-SmsReport
