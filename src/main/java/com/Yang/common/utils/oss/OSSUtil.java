@@ -24,9 +24,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class OSSUtil {
 	
-	private static String ENDPOINT = "oss-cn-beijing.aliyuncs.com";
-	private static String ACCESS_KEY_ID = "LTAI3KNEbzkArN2N";
-	private static String ACCESS_KEY_SECRET = "0g4ritb4WrBd0Y0sEbqv3YcOF8Ej1e";
+	private static String ENDPOINT = "";
+	private static String ACCESS_KEY_ID = "";
+	private static String ACCESS_KEY_SECRET = "";
 
 	public static final OSSClient getOSSClient() {
 		return new OSSClient(ENDPOINT, ACCESS_KEY_ID, ACCESS_KEY_SECRET);
